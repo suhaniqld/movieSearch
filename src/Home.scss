@@ -1,0 +1,192 @@
+.Home {
+  position: relative;
+  text-align: center;
+  background: radial-gradient(
+    107.98% 184.08% at 39.46% 6.65%,
+    #212d42 0%,
+    #0e0e0e 100%
+  );
+
+  .movieDBIcon {
+    margin-top: 100px;
+    width: 20%;
+  }
+
+  .rect-1,
+  .rect-2,
+  .rect-3,
+  .rect-4,
+  .rect-5,
+  .rect-6 {
+    width: 11em;
+    height: 0.5em;
+    position: absolute;
+    background: rgba(1, 210, 119, 0.83);
+    border-radius: 3.5px;
+    transform: rotate(-45deg);
+  }
+
+  .rect-1 {
+    top: -1%;
+  }
+
+  .rect-2 {
+    top: 1%;
+  }
+
+  .rect-3 {
+    top: 8.5%;
+    left: 1.7%;
+  }
+
+  .rect-4 {
+    top: -1%;
+    right: 18%;
+  }
+
+  .rect-5 {
+    top: 0.6%;
+    right: 18%;
+  }
+
+  .rect-6 {
+    top: 10%;
+    right: 8%;
+  }
+
+  .movie-heading {
+    float: left;
+    margin: 4% 0 0 4%;
+    font-family: Montserrat;
+    color: #e3f4fc;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 24px;
+  }
+
+  .movies {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1em;
+
+    .spinner {
+      height: 80px;
+      margin: auto;
+    }
+
+    .movie {
+      display: inline-table;
+      padding: 14px 10px;
+      max-width: 30%;
+      border-radius: 10%;
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 138px;
+        height: 300px;
+        cursor: pointer;
+      }
+
+      .movie-name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 16px;
+        color: #e6f7ff;
+        cursor: pointer;
+      }
+
+      .release-date {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 14px;
+        color: #a1d1e6;
+      }
+    }
+
+    .error-message {
+      margin: auto;
+      font-weight: bold;
+      color: rgb(161, 15, 15);
+    }
+  }
+
+  .search {
+    justify-content: center;
+    margin-top: 50px;
+
+    input[type="text"] {
+      width: 90%;
+      min-width: 90%;
+      background: white url(./searchIcon.png) no-repeat scroll;
+      background-position: 95%;
+      background-size: 1.3em 1.3em;
+      padding: 1% 2%;
+      position: relative;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 22px;
+      font-size: 14px;
+      color: #01d277;
+    }
+
+    ::placeholder {
+      color: red;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2em;
+      padding-left: 10px;
+      color: #01d277;
+    }
+
+    input[type="submit"] {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 916px) {
+    .movie {
+      width: 150%;
+
+      img {
+        min-width: 250px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 651px) {
+    .rect-1 {
+      top: -0.5%;
+    }
+
+    .rect-2 {
+      top: 0.5%;
+    }
+
+    .rect-3 {
+      top: 3%;
+      left: -10%;
+    }
+
+    .rect-4 {
+      top: -0.5%;
+      right: -4%;
+    }
+
+    .rect-5 {
+      top: 0.5%;
+      right: -3%;
+    }
+
+    .rect-6 {
+      top: 3.6%;
+      right: -6%;
+    }
+  }
+}
