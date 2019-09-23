@@ -51,7 +51,7 @@ const MovieDetails = ({ match }) => {
                 {moment(movieDetails.release_date).format("YYYY")}
                 {"  "}
                 <span className="score">
-                  {movieDetails.vote_average * 10}% User score
+                  {movieDetails.vote_average * 10}% User Score
                 </span>
               </p>
               <p className="run-time">
