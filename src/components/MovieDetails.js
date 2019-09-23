@@ -25,8 +25,6 @@ const MovieDetails = ({ match }) => {
     });
   }, []);
 
-  console.log(movieDetails);
-
   return (
     <div className="movie-details">
       {movieDetails ? (
@@ -51,6 +49,10 @@ const MovieDetails = ({ match }) => {
               <div className="movie-title">{movieDetails.title}</div>
               <p className="date">
                 {moment(movieDetails.release_date).format("YYYY")}
+                {"  "}
+                <span className="score">
+                  {movieDetails.vote_average * 10}% User score
+                </span>
               </p>
               <p className="run-time">
                 {convertMinsToHrsMins(movieDetails.runtime)}

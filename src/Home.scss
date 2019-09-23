@@ -1,4 +1,4 @@
-.Home {
+.home {
   position: relative;
   text-align: center;
   background: radial-gradient(
@@ -9,7 +9,6 @@
 
   .movieDBIcon {
     margin-top: 100px;
-    width: 20%;
   }
 
   .rect-1,
@@ -78,21 +77,33 @@
 
     .movie {
       display: inline-table;
-      padding: 14px 20px;
-      max-width: 30%;
+      padding: 14px;
       border-radius: 10%;
+      position: relative;
+
+      span {
+        position: absolute;
+        padding: 1%;
+        left: 10%;
+        top: 5%;
+        border-radius: 17%;
+        font-size: 15px;
+        color: #fff;
+        font-weight: bold;
+      }
 
       a {
         text-decoration: none;
       }
 
       img {
-        width: 140px;
         height: 280px;
         cursor: pointer;
+        border-radius: 5%;
       }
 
       .movie-name {
+        font-family: roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -132,6 +143,7 @@
       position: relative;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
       border-radius: 22px;
+      font-family: roboto;
       font-size: 14px;
       color: #01d277;
     }
@@ -157,10 +169,16 @@
   }
 
   @media screen and (max-width: 651px) {
+    .movies {
+      margin: 0;
+    }
     .movie {
+      width: 41%;
+      padding: 14px 0;
+
       img {
         max-height: 200px;
-        max-width: 130px;
+        width: 150px;
       }
     }
     .rect-1 {
@@ -172,7 +190,7 @@
     }
 
     .rect-3 {
-      top: 3%;
+      top: 6%;
       left: -10%;
     }
 
@@ -187,17 +205,24 @@
     }
 
     .rect-6 {
-      top: 3.6%;
+      top: 6%;
       right: -6%;
     }
   }
 
   @media screen and (min-width: 916px) {
     .movie {
-      width: 150%;
+      width: 17%;
+
       img {
-        min-width: 250px;
+        width: 100%;
       }
     }
+  }
+}
+
+@media screen and (min-width: 916px) {
+  .home {
+    padding: 0 8% !important;
   }
 }

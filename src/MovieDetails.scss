@@ -1,4 +1,6 @@
 .movie-details {
+  overflow-x: hidden;
+  height: 100vh;
   background: radial-gradient(
     107.98% 184.08% at 39.46% 6.65%,
     #212d42 0%,
@@ -10,7 +12,7 @@
 
     .backdrop {
       background-repeat: no-repeat;
-      min-height: 10em;
+      min-height: 16em;
       background-size: cover;
       opacity: 0.6;
       z-index: 1;
@@ -18,8 +20,8 @@
       .back-arrow {
         display: inline-block;
         font-family: monospace;
-        font-size: 70px;
-        margin: 1% 3%;
+        font-size: 50px;
+        margin: 1%;
         color: #fff;
         cursor: pointer;
       }
@@ -31,32 +33,35 @@
 
       .movie-poster {
         position: absolute;
-        left: 3%;
         border-radius: 10%;
         z-index: 2;
       }
 
       .title-date {
         position: relative;
+        font-family: Montserrat;
 
         .movie-title {
           display: inline-block;
           left: 41%;
           top: 114%;
-          font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
-          font-size: 2em;
+          font-size: 1.5em;
           color: #e3f4fc;
         }
 
         .date {
-          font-size: 21px;
+          font-size: 18px;
           color: #9fbbc7;
+
+          .score:before {
+            content: "• ";
+          }
         }
 
         .run-time {
-          font-size: 21px;
+          font-size: 18px;
           color: #9fbbc7;
         }
       }
@@ -69,12 +74,13 @@
       span {
         font-family: Montserrat;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 25px;
         line-height: 24px;
         color: #e3f4fc;
       }
 
       p {
+        font-family: Roboto;
         font-size: 21px;
         color: #9fbbc7;
         margin-top: 5%;
@@ -90,7 +96,8 @@
     @media screen and (max-width: 651px) {
       .movie-poster {
         max-width: 40%;
-        top: 16%;
+        top: 26%;
+        left: 3%;
       }
 
       .title-date {
@@ -104,39 +111,33 @@
       }
 
       hr {
-        margin-top: 14%;
+        margin-top: 10%;
+        border-color: #5d8696;
       }
     }
 
     @media screen and (min-width: 916px) {
       .movie-poster {
-        min-width: 16%;
+        width: 150px;
+        left: 18%;
         top: 30%;
       }
 
-      .backdrop {
-        min-height: 20em;
-      }
-
       .movie-info {
-        left: 30%;
+        padding: 0 10%;
 
         .title-date {
           margin-top: 2%;
-          margin-left: 23%;
+          margin-left: 22%;
         }
 
         .date {
-          margin-top: 8%;
-        }
-
-        .run-time {
-          margin-top: 10%;
+          margin-top: 6%;
         }
       }
 
       .movie-overview {
-        margin-top: 2%;
+        margin: 2% 18%;
 
         p {
           margin-top: 2%;
@@ -144,7 +145,8 @@
       }
 
       hr {
-        margin-top: 4%;
+        margin: 3% 18%;
+        border-color: #5d8696;
       }
     }
   }

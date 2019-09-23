@@ -9,6 +9,12 @@ const Movie = ({ movie }) => {
       <Link to={`/movie/${movie.id}`}>
         <img alt={`The movie titled: ${movie.Title}`} src={moviePoster} />
       </Link>
+      <span
+        style={{
+          background: movie.vote_average * 10 >= 75 ? "#11a051" : "#41098a"
+        }}
+        className="user-score"
+      >{`${movie.vote_average * 10}%`}</span>
       <Link to={`/movie/${movie.id}`}>
         <p className="movie-name">{movie.title}</p>
       </Link>

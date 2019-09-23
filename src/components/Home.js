@@ -87,7 +87,7 @@ const Home = () => {
   const { movies, errorMessage, loading } = state;
 
   return (
-    <div className="Home">
+    <div className="home">
       <img className="movieDBIcon" src={movieDBIcon} alt="" />
       <div className="rect-1" />
       <div className="rect-2" />
